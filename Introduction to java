@@ -1,0 +1,92 @@
+INTRODUCTION TO JAVA
+History:
+It was developed by Sun Microsystems by James Gosling in 1995,The very first name of java is “Oak”.
+Features of java:
+•	It’s an object oriented language- which deals with only objects.
+•	Java is a platform Independent -when the java code is compiled once ,then it can be executed on any platform.
+•	Java is simple and easy to learn
+•	Java provides security has it as class loaders and byte code verifiers
+•	It provides multi-threading property -many tasks are done at a same time.
+•	It’s a dynamic language-carry run-time information that are used to verify and resolve the errors.
+•	It is distributed language.
+•	It’s a robust-it mainly focuses on compile time errors checking and runtime checking.
+•	It’s a portable language
+•	It provides good performance
+OOPS IN JAVA:
+OOPS is basically as name suggest, it totally deals with objects and the main aim of the oops is data hiding, reusability and security.
+There are some concepts in OOPS:
+•	Objects
+•	Class
+•	Inheritance
+•	Abstraction
+•	Encapsulation
+•	Polymorphism
+Object- It’s a real world entity and it has both state and behavior  and It’s an Instance of class
+Class- It’s a blueprint of objects and it contains data members and  member functions 
+Implementation:
+class calculator:
+	def addition(self ,a ,b):
+		return a+ b
+	def sub(self ,a ,b): 
+		return a-b
+obj=calculator()
+print(obj. addition(2,5))
+
+
+Inheritance- Acquiring the properties of parent class to the child class is called inheritance
+	Basically ,in JAVA there are different types of Inheritance
+•	Single Inheritance
+•	Multi-level Inheritance
+•	Hierarchy Inheritance
+Implementation
+class father:
+	def addition(self ,a ,b):
+		return a+ b
+	def sub(self ,a ,b): 
+		return a-b
+class mother:
+	def addition(self ,a ,b):
+		return a+b-1
+	def multiplication(self ,a ,b):
+		return a*b
+class son(father ,mother):
+	def addition(self ,a ,b):
+		return a+b+2
+	def division(self ,a, b):
+		return a//b
+ obj=son()
+print(obj. addition(2,5))
+
+Abstraction-Showing off the important data and hiding the unnecessary data and implementation is called Abstraction.
+Encapsulation- Wrapping up of data into a single unit is called Encapsulation.
+Polymorphism – When a single task is performed in different ways then it is said to be Polymorphism.
+There are two types of polymorphism-
+•	Run-time -Method overriding
+•	Compile-time-Method overloading
+Method Overloading- when a single class has different methods of same method name and with different arguments and arguments size 
+Method Overriding- It provides the specific implementation of a method which is already provided by superclass.
+Data types-
+•	Integral-All the integers comes under this type
+•	Non-integral-floating-Except integers all the decimal values 
+•	Characters- The letters and characters comes under this type
+•	Boolean- this datatype has two literals -True and False
+
+OOAD
+It’s a Object Oriented Analysis and Design
+The main  purpose of OOAD is to identify the objects and relationships between them and design and implement accordingly.
+It analyzes and design the applications and used in visual-modelling throughout the development
+The process will be in this order-
+•	OO Analysis
+•	OO Design
+•	OO Implementation
+The design is implemented after analysis and design, using Object Oriented programming languages such as Java ,C++, etc …
+UML
+It stands for Unified Modelling Language
+It’s a graphical language used in software developments, it deal with some notations to produce the models.
+The main purpose of the UML is to visualize the Architectural-blueprint
+The UML originally designed by the three amigos at rational crop-they are:
+•	Booch -Excellent for design and implementation
+•	Jim- Best for analysis
+•	Ivar-Understanding the behavior of entire system.
+
+
