@@ -1,0 +1,173 @@
+Method
+A method is code block that contains a series of statements to perform a specific task
+How to create a method?
+	Public Int FuncName(int a,  int b){
+         Statements……. 
+}
+public-Access specifier
+Int -datatype
+FuncName – function name/method name
+int a, int b- list of parameters
+what are local variables?
+The variables which are defined or declared inside the function or a method is called local variables.
+How to write a method?
+	Public Int EvenFunc(int a){
+		if(a%2==0)
+			return Even
+		else
+			return Odd
+  	}
+Pass by value and pass by reference
+ Pass by reference is a parameter passing technique, in which the method receives not the object but an argument that indicates the location of the object.
+ Pass by value is also a parameter passing technique in which it only passes the values directly as parameters
+Method overloading
+A single class has different methods of same method names and different arguments 
+Public class calci{
+void add(int a){
+return  a;
+}
+void add(int a ,int b){
+	return a+b;
+}
+void add(float a){
+	return a;
+}
+Public static void main(String args[]){
+	Obj=new calci();
+	System.out.println(obj.add(2,3))
+}
+
+}
+
+Constructors-
+-A Constructor is used to initialize the objects when it is created
+-It has the same name as class
+-All  classes have at least a default constructor that initializes the member variables as “0”.
+-When one create the constructor then the default constructor is disappears.
+Default constructors- The constructor that take no arguments and has empty body.
+Constructor Overloading-
+-Constructor overloading is almost similar to method overloading but it totally deals with constructors 
+We can use This reference at the first line of a constructor to call another constructor
+Implementation:
+
+Public class student{
+Private static final double exam_fees=1000;
+	private String name;
+   	Private double fees;
+	Private Date birthdate;
+	Public student(String name, double fees, date DoB){
+	this.name=name;
+	this.fees=fees;
+	this.birthdate=DoB
+	}
+	Public student(String name, double fees){
+	This.(name ,fees ,null)
+	}
+	Public student(String name, date DoB ){
+	This.(name, exam_fees, DoB)
+	}
+}
+Operators-
+-There are different operators similar to other programming languages such as-
+•	Arithmetic- (+,-,*,%,/,++,--)
+•	Relational- (==,!=,>,<,>=,<=)
+•	Bitwise- (&,|,^,~,<<,>>,>>>)
+•	Logical- (&&,||,!)
+•	Assignment – (+=,-=,*=,/=,%=,<<==,>>==,&=,|=,^=)
+Arithmetic-
+Implementation
+
+Public class calculator{
+	Public static void main(String args[]){
+		int a=10;
+		int b=5;
+		System.out.println(“Addition=”+(a+ b));
+		System.out.println(“Subtraction=”+(a-b));
+
+}
+}
+Relational-
+Implementation
+Public class A{
+	Public static void main(String args[]){
+		int a=10;
+		int b=5;
+		if(a>b)
+			System.out.println(“a is greater”);
+		else
+			System.out.println(“b is greater”);
+
+}
+}
+Bitwise-
+Implementation
+Public class A{
+	Public static void main(String args[]){
+		int a=10;
+		int b=5;
+		System.out.println(a&b);
+		System.out.println(a|b);		
+}
+}
+Logical-
+Implementation
+Public class A{
+	Public static void main(String args[]){
+		int a=10;
+		int b=5;
+		System.out.println(a&&b);
+		System.out.println(a||b);		
+}
+}
+Assignment –
+Implementation
+Public class A{
+	Public static void main(String args[]){
+		int a=10;
+		int b=5;
+		if(a>b)
+			b=b+a
+		else
+			a=a+b
+		System.out.println(a,b);		
+}
+}
+Encapsulation-	
+Implementation
+public class Test {
+   private String name;
+   private int age;
+
+   public String getName() {
+      return name;
+   }
+
+   public String getIdNum() {
+      return idNum;
+   }
+
+   public void setName(String newName) {
+      name = newName;
+   }
+
+   public void setIdNum( String newId) {
+      idNum = newId;
+   }
+
+
+Access Specifiers
+-There are different Access specifiers  ,JAVA provides security due to these Access specifiers
+They are-
+•	Public-can be accessed in a universe/open to other classes in a same project
+•	Private-can be accessed in a particular class
+•	Protected-only accessed up to sub class
+•	Default-can be accessed to same package.
+
+Instance variable- The variable which is declared outside the method but inside the class ,when a space got allocated to an object in a heap memory then a slot for each instance variable value is created
+Static variable- The variable is said to be static if every object in all methods in a class can be accessed and it is declared with a static keyword ,it is declared in public
+
+
+
+
+
+
