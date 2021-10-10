@@ -1,0 +1,54 @@
+JDBC-Java Data Base Connectivity
+  JDBC is an API that let to access any tabular source virtually from the Java programming language.
+  Basic steps in java for using a database
+  •	Establishing a connection
+  •	Creating JDBC statements
+  •	Executing SQL statements
+  •	Results
+  •	Connections closed
+Establishing a connection-
+	For establishing a connection we need to import the module
+  -import java.sql.*;
+  For establishing firstly we need to load the drivers then connection is made
+Creating JDBC statements-
+	For creating a database then the below syntax will be followed
+  -con.createStatement();
+Executing SQL statements-
+	For execution-
+		Stmt.executeUpdate(createlehigh);
+Results-
+	Resultset rs=Stmt.executequery(createlehigh);
+Connections close-
+	Stmt.close();
+	Con.close();
+Transactions and JDBC
+  JDBC allows the sql statements to be grouped together in a single transaction.
+  Transaction is controlled by the connection object
+  There are also some features like we can turn off automatic commit mode
+  All the changes which are done by the SQL statements will be made permanently in the database
+How to handle errors with exceptions?
+  If a statement or a line of code throws an exception in a try block then ,it can be caught in one of the corresponding statements:
+	finally{…}
+  -The data will be rollbacked in a catch{…} block or close the databace connection and free             up the database on finally{…} block
+How to access a database?
+	There are some steps to be followed to access a database-
+  •	JAVA Application
+  •	JDBC-API
+  •	JDBC Driver manager
+  •	JDBC -ODBC bridge
+  •	ODBC manager
+  1.ODBC driver     2.ODBC driver
+  DBMS 1                 DBMS 2
+Meta data from DB-
+  DatabaseMetaData interface provides methods to get meta data of a database such as database product name, database product version, driver name, name of total number of tables, name of total number of views etc. public String getDriverName ()throws SQLException: it returns the name of the JDBC driver.
+JDBC and beyond-
+  JNDI-Java Naming & Directory Interface
+  -API for network wide sharing of information about users ,services ,machines and      applications
+  -It preserves Java’s object model
+JDO-Java Data Object
+	-This models persistence of objects using RDBMS
+	-This performs saving and loading objects from RDBMS
+SQLJ-Embedded SQL in Java
+	-It helps in mapping sql types to java classes
+	-Standardized and optimized by oracle, sybase and IBM.
+
