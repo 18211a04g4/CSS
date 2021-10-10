@@ -1,0 +1,39 @@
+Arrays
+An Array is an object which holds the values of fixed type of same kind
+The length of the array is known after the array is created
+The length is fixed after creating the array 
+There are two types of arrays
+	One dimensional 
+	Multi-dimensional
+Memory Allocation
+Memory allocation is a process by which computer programs and services are assigned with physical or virtual memory space
+How to create the array?
+	Syntax-
+		Datatype[] arrayRefVar=new datatype[array size];
+	Example –
+		int myList=new int[12];
+array bounds
+Implementation
+Public void print(int[] list)
+{
+	For(int i=0;i<list.length;i++){
+	System.out.println(list[i]);	
+}
+}
+Collections
+	Its an object that contains the group of objects and those are called elements
+Set
+   Set is a collection of elements or objects, that contains no duplicate elements
+  Set is an interface that extends Collection interface
+  A set is an unordered collection
+List 
+	Lists are used to store multiple items in a single variable , with duplicates
+	Its an ordered collection
+Map
+	It describes the object mapping of keys to values where duplicates are not allowed
+Iterators
+  An Iterator is an object that can be used to loop through collections, like array list and hashset.
+  It retrieves every element in a collection 
+
+	
+
