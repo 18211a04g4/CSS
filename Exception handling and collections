@@ -1,0 +1,105 @@
+Exception Handling
+Exception-An exception is an event that disturbs the normal flow of the program 
+-It is an object which is thrown at runtime
+Exception handling-It is a mechanism to handle the run-time errors such as class not found exception ,IO exception ,SQL exception 
+The advantage of exception handling is to maintain the normal flow of the application
+Types of exception handling-
+1.Checked exception
+2.Unchecked exception
+3.Error
+1.Checked exception-
+-The classes that directly inherit the throwable class except runtime exception and those errors are checked exceptions 
+-These are tested or checked at compile time
+2.UnChecked exception-
+	-The class that inherit the runtime exception are known as unchecked exceptions
+	-These are checked at runtime but not checked at compile time
+3.Error-
+	-These are not recoverable 
+Java provides 5 keywords that are used in handle the exception
+1.try
+	This is used to specify a block where we place an exception code
+2.catch-
+	This is used to handle the exception ,preceded by try block
+3.finally-
+	It is used to execute the necessary code of the program
+4.throw-
+	This throws an exceptions
+5.throws
+It is used in declaring the exceptions, it doesn’t throw an exceptions used with method signature
+Method overriding
+	-there are no exceptions
+If any those are thrown by overridden method 
+-But these cannot throw 
+•	Additional exceptions
+•	Superclass of the exception
+
+Static –
+ Static variable- Class variables also known as static variables are declared with the static keyword in a class, but outside a method, constructor or a block.
+  Static variables are created when the program starts and destroyed when the program stops.
+ Static method- The static keyword is used to create methods that will exist independently of any instances created for the class.
+  Static methods do not use any instance variables of any object of the class they are defined in
+ Static block- The static block executes when classloader loads the class. A static block is invoked before main() method
+  Implementation
+  Class A
+  {
+	  Public static void main(String args[]){
+	  System.out.println(“Hello World..!”);
+   }
+  }
+Final
+	-Final keyword is used to restrict the usage 
+	-The final keyword can be used with variable ,method ,class
+	Final variable
+	  Constants are static final variables
+	Final class
+	 Implementation
+	final class school{}
+	class Govt extends school
+{
+	Void run()
+              {
+		System.out.println(“good infrastructure”);
+}
+Public static void main(String args[]){
+Govt govt=new Govt();
+Govt.run(); 
+}
+}
+Final method
+	A method can be declared final if it has an implementation that should not be changed .
+  A class that is declared final cannot be sub
+  overriding is not possible, if we make any method as final 
+Final parameter
+  A final variable is a constant
+  overriding and subclass is not possible in a final method 
+
+enum   
+  It improves type safety
+  It can be easily used in switch
+  It can have constructors,method and fields
+  Many interfaces can be implemented by enum
+  
+  Implementation
+    class Enumsample
+    {
+      public enum flower
+         {Rose,Lilly,Jasmine}
+      public static void main(String[] args)
+      {
+        for(flower s:flower.values())
+        System.out.println(s);
+      }
+    }
+  i
+  Initilizing values to the enum constants
+    The constants have initial values starts from 0,1,2 and etc....
+    Enum have fields,methods and constructors
+    We can also initilize the specific value to the enum constants by defining feilds and constructors.
+ 
+
+
+
+
+
+
+
