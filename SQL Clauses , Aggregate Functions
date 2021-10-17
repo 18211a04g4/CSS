@@ -1,0 +1,234 @@
+SQL
+SQL stands for structured query language ,which is used to retrieve ,manipulate and accessing the data
+SQL is a software used to access the Relational DBMS
+In RDBMS the data is stored in the form of tables which contains rows and columns
+SQL is of two types such as 
+•	DDL
+•	DML
+DDL- data definition language
+This is the language which helps in creating and altering the database and does some functions such as
+•	CREATE DATABASE-The CREATE DATABASE statement is used to create a database
+•	CREATE TABLE - creates a new table
+
+SQL CREATE TABLE Syntax-
+
+CREATE TABLE table_name
+(
+column_name1 datatype,
+column_name2 datatype
+....
+)
+•	DROP TABLE-The DROP DATABASE statement is used to delete the database table
+SQL DROP TABLE Syntax
+
+DROP TABLE table_name;
+•	DROP INDEX- The DROP INDEX statement is used to delete the index
+
+•	ALTER TABLE- The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+SQL ALTER TABLE Syntax
+  ALTER TABLE table_name
+  ADD column_name datatype;
+•	ALTER DATABASE - The ALTER DATABASE modifies a database
+
+•	TRUNCATE TABLE- 
+SQL TRUNCATE TABLE Syntax
+
+TRUNCATE TABLE table_name;
+DML-data manipulation language
+	This helps in manipulating the data in the database and does the functions such as
+•	SELECT
+Syntax-
+	SELECT * FROM table_name;
+•	INSERT
+Syntax-
+	INSERT INTO table_name
+	VALUES (value1,value2,………);
+•	DELETE
+Syntax-
+	DELETE FROM table_name 
+	WHERE condition;
+•	UPDATE
+Syntax-
+	UPDATE table_name
+	SET column1=value1,column2=value2,……
+	WHERE condition;
+SQL Constraints
+Constraints are used to limit the type of data that can go into a table.
+•	NOT NULL- The NOT NULL constraint enforces a column to NOT accept NULL values
+•	UNIQUE- The UNIQUE constraint uniquely identifies each record in a database table.
+•	CHECK-The CHECK constraint is used to check the condition.
+•	DEFAULT- The DEFAULT constraint is used to insert a default value into a column.
+Keys-An SQL key is either a single column or a group of columns that can be uniquely identify rows in a table. It also helps in establishing the relationship between multiple tables in the database.
+Types of keys in sql-
+•	Primary key
+•	Unique key
+•	Foreign key
+•	Candidate key
+•	Super key
+•	Alternate key
+•	Composite key
+Unique key- It is a set of one or more than one fields of a table that uniquely identify the row in a database table
+Implementation-
+  CREATE TABLE student
+  (
+  sl_no INT,
+  student_id INT,
+  student_name VARCHAR(255)
+  )
+Primary key-It is a unique key which does not contains any NULL values.
+Implementation-
+  CREATE TABLE student
+  (
+  sl_no INT,
+  student_id INT,
+  PRIMARY KEY (sl_no)
+  )
+Foreign key- It is a column that creates a relationship between two tables .The purpose of foreign key is to maintain the data integrity 
+Implementation-
+
+  CREATE TABLE student
+  (
+  sl_no INT,
+  student_id INT,
+  PRIMARY KEY (sl_no),
+  FOREIGN KEY (student_id) REFERENCES department(dep_id)
+  )
+  CREATE TABLE department
+  (
+  dep_id INT NOT NULL,
+  LastName VARCHAR(255) NOT NULL,
+  FirstName VARCHAR (255),
+  City VARCHAR (255),
+  PRIMARY KEY (sl_no)
+  )
+Candidate key -It is a set of attributes that uniquely identify tuples in a table ,it is a super key with no repeated attributes
+Super key- It is a group of single or multiple keys which identifies rows in a table.
+Composite key- It is a combination of two or more columns that uniquely identify the rows in a table.
+ Alternate key-It is a column or group of columns in a table that uniquely identify every row in that table.
+AND operator - if both the first condition and the second condition are true.
+OR operator - if either the first condition or the second condition is true.
+
+SELECT * FROM Persons
+WHERE FirstName=’peter’
+AND LastName LIKE ‘%s’
+
+The ORDER BY keyword sorts the records in ascending order by default.
+
+AUTO INCREMENT a field 
+Auto-increment allows a unique number to be generated ,when a new record is inserted into a table.
+CREATE TABLE student
+(
+St_id INT NOT NULL AUTO_INCREMENT,
+LastName VARCHAR(255) NOT NULL,
+FirstName VARCHAR(255),
+City VARCHAR(255),
+PRIMARY KEY (st_id)
+)
+The GROUP BY Statement
+The GROUP BY statement is used to arrange identical data into groups with the help of some functions
+The HAVING Clause
+The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions
+Syntax-
+	SELECT column1,column2
+	FROM table GROUP BY column1 HAVING condition;
+SQL JOIN
+SQL joins are used to query data from two or more tables, based on a relationship between certain columns in these tables
+Types of JOINS:
+•	INNER JOIN  -  The INNER JOIN keyword selects all rows from both the tables as long as the condition satisfies
+•	LEFT JOIN – This joins returns all the rows of the table on the left side of the join and matching rows for the table on the right side of join
+•	RIGHT JOIN- This joins returns all the rows of the table on the right side of the join and matching rows for the table on the left side of join
+•	FULL JOIN-It creates the result-set by combining result of both left join and right join .The result-set will contain all the rows from both the tables.
+
+UNION- The UNION operator is used to combine the result set of two or more SELECT statements
+Implementation-
+SELECT student_id FROM student
+UNION
+SELECT dep_id FROM department;
+SQL VIEW Statement
+In SQL, a view is a virtual table based on the result-set of an SQL statement.
+A view contains rows and columns, just like a real table. 
+The SQL SELECT DISTINCT Statement-The DISTINCT keyword can be used to return only
+distinct values.
+SQL SELECT DISTINCT Syntax
+SELECT DISTINCT column_name(s) FROM
+table_name;
+The ORDER BY Keyword-
+•	To sort the result-set by a specified column
+•	The ORDER BY keyword sorts the records in ascending order by default.
+SQL ORDER BY Syntax
+SELECT column_name(s)
+FROM table_name
+ORDER BY column_name(s) ASC|DESC
+The TOP Clause- The TOP clause is used to specify the number of records to return.
+The TOP clause can be very useful on large tables with thousands of
+records.
+SQL LIKE operator-
+The LIKE operator is used to search for a specified pattern
+in a column.
+Example-
+SELECT * FROM student
+WHERE City NOT LIKE '%s%’
+The BETWEEN Operator
+The BETWEEN operator selects a range of data between two values. The values can be numbers, text, or dates.
+SQL BETWEEN Syntax
+    SELECT st_id
+    FROM student
+    WHERE st_id
+    BETWEEN 5 AND 8
+Indexes- These are special lookup tables that the database search engine can use to speed up data retrieval . It is a pointer to data in a table.
+•	CREATE INDEX- It is used to create the indexes in tables
+Example
+	CREATE INDEX index_name
+	ON table_name(column1,column2,……);
+•	DROP INDEX- It is used to delete an index in a table
+Example
+	DROP INDEX index_name ON table_name;
+SQL Dates- The most difficult part when working with dates is to be sure
+that the format of the date you are trying to insert, matches
+the format of the date column in the database.
+SQL Aggregate Functions-SQL aggregate functions return a single
+value, calculated from values in a column.
+Useful aggregate functions:
+•AVG() - Returns the average value
+Example-
+SELECT AVG(salary) FROM employee
+•COUNT() - Returns the number of rows
+Example-
+	SELECT COUNT(salary) FROM employee
+	WHERE salary>400000
+•FIRST() - Returns the first value
+Example-
+	SELECT FIRST(std_id) FROM student
+•LAST() - Returns the last value
+Example-
+SELECT LAST(std_id) FROM student
+
+•MAX() - Returns the largest value
+Example-
+SELECT MAX(salary) FROM employee
+•MIN() - Returns the smallest value
+Example-
+SELECT MIN(salary) FROM employee
+
+•SUM() - Returns the sum
+Example-
+	SELECT SUM(salary) FROM employee
+The UCASE() Function
+The UCASE() function converts the value of a field to uppercase.
+Example-
+		SELECT UCASE(FirstName) FROM student
+The LCASE() Function
+The LCASE() function converts the value of a field to lowercase.
+Example-
+	SELECT LCASE(FirstName) FROM student
+The MID() Function
+The MID() function is used to extract characters from a text field.
+Example-
+	SELECT MID(FirstName) FROM student
+The LEN() Function
+The LEN() function returns the length of the value in a text field.
+Example-
+	SELECT LEN(st_id) FROM student
+	
+
+
